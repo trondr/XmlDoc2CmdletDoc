@@ -24,8 +24,8 @@ namespace XmlDoc2CmdletDoc.Tests
 
         protected override void GenerateHelpForTestAssembly(string assemblyPath)
         {
-#if NET461
-            var toolFrameworkName = "net461";
+#if NET462
+            var toolFrameworkName = "net462";
 #elif NET472
             var toolFrameworkName = "net472";
 #elif NET48
@@ -36,6 +36,10 @@ namespace XmlDoc2CmdletDoc.Tests
             var toolFrameworkName = "netcoreapp3.1";
 #elif NET5_0
             var toolFrameworkName = "net5.0";
+#elif NET6_0
+            var toolFrameworkName = "net6.0";
+#elif NET7_0
+            var toolFrameworkName = "net7.0";
 #endif
 
             var toolDir = Path.Combine(SolutionDir, "XmlDoc2CmdletDoc", "bin", Configuration, toolFrameworkName);

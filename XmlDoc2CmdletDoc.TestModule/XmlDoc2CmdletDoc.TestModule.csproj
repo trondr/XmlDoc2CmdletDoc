@@ -1,26 +1,26 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>net461;net472;net48;netstandard2.0;netcoreapp2.1;netcoreapp3.1;net5.0</TargetFrameworks>
-    <TargetFramework>net7.0</TargetFramework>
+    <TargetFrameworks>net7.0;net6.0;net462;net472;net48</TargetFrameworks>    
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <NoWarn>1591</NoWarn>
   </PropertyGroup>
   <ItemGroup Condition="$(TargetFramework.StartsWith('net4'))">
     <PackageReference Include="Microsoft.PowerShell.5.ReferenceAssemblies" Version="1.1.0" />
-  <ItemGroup>
-    <PackageReference Include="System.Management.Automation" Version="7.3.6" />
   </ItemGroup>
   <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
     <PackageReference Include="PowerShellStandard.Library" Version="5.1.0" />
   </ItemGroup>
   <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp2.1'">
-    <PackageReference Include="System.Management.Automation" Version="6.2.6" />
+    <PackageReference Include="System.Management.Automation" Version="7.3.6" />
   </ItemGroup>
   <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp3.1'">
-    <PackageReference Include="System.Management.Automation" Version="7.0.2" />
+    <PackageReference Include="System.Management.Automation" Version="7.3.6" />
+  </ItemGroup>  
+  <ItemGroup Condition="'$(TargetFramework)' == 'net6.0'">
+    <PackageReference Include="System.Management.Automation" Version="7.2.13" />    
   </ItemGroup>
-  <ItemGroup Condition="'$(TargetFramework)' == 'net5.0'">
-    <PackageReference Include="System.Management.Automation" Version="7.1.4" />
+  <ItemGroup Condition="'$(TargetFramework)' == 'net7.0'">
+    <PackageReference Include="System.Management.Automation" Version="7.3.6" />
   </ItemGroup>
 </Project>
